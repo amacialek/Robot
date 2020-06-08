@@ -4,32 +4,35 @@ Library   SeleniumLibrary
 *** Variables ***
 ${URL}     https://wizzair.com/pl-pl#/
 
-${BROWSER}               Firefox
-${PAGE_TITLE}            Wizz Air
+${BROWSER}              Firefox
+${PAGE_TITLE}           Oficjalna strona Wizz Air | Rezerwuj bezpośrednio, by skorzystać z najlepszych cen
 
-${ZALOGUJ_BUTTON}        data-test="navigation-menu-signin"
-${RRJESTRACJA BUTTON}    //a[contains(text(), 'Rejestracja')]
-${NAME_IMPUT}           name=firstName
-${SURNAME_INPUT}        surname=lastName
+${NAME}                 Anna
+${SURNAME}              Zofia
+${GENDER}               Kobieta
+${COUNTRY_CODE}         +48
+${PHONE_NUMBER}         123456789
+${EMAIL}                ania@gmail.com
+${PASSWORD}             Ania1Zofia2
+${COUNTRY}              Polska
+
 
 *** Test Cases ***
 Valid Registration
 
-   Open Main Page
-
-   Click element    Zaloguj sie
-   Click element    Rejestracja
-   Input Text       Imie
-   Input Text       Nazwisko
-   Click element    Plec
-   Select           Kod Kraju
-   Input Text       Telefon
-   Input Text       Adres e-mail
-   Input Text       Login
-   Input Text       Haslo
-   Search           Narodowosc
-   Select           Akceptuje Informacje o polityce prywatnosci
-   Login button     Zarejestruj Sie
+  Open main page
+  Click login button
+  Click registration button
+  Fill valid NAME
+  Fill valid SURNAME
+  Choose GENDER
+  Choose COUNTRY CODE
+  Fill valid PHONE NUMBER
+  Fill valid EMAIL
+  Fill valid PASSWORD
+  Choose COUNTRY
+  Accept Privacy Politycy
+  Click registration button
 
   [Teardown]       Close Browser
 
@@ -37,7 +40,16 @@ Valid Registration
 *** Keywords ***
 Open Main Page
   Open browser       ${URL}       ${BROWSER}
-  sleep    3
-      Title should be      ${PAGE_TITLE}
+  Title should be      ${PAGE_TITLE}
 
-Click element
+Click login button
+  Click element    class:data-test="navigation-menu-signin"
+
+Click registration buttton
+  Click element
+
+Fill valid NAME
+  Input Text NAME=FirstName     {NAME}
+
+Fill valid SURNAME
+  Input Text NAME=LastName      {SURNAME}
