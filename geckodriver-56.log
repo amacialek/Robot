@@ -1,0 +1,5 @@
+1592338514754	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilecDrghI"
+1592338518789	Marionette	INFO	Listening on port 37749
+1592338518818	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://wizzair.com/static_fe/assets/scripts/889.min.ef6ad403.js, line 1: TypeError: x() is null
+1592338543434	Marionette	INFO	Stopped listening on port 37749

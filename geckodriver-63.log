@@ -1,0 +1,10 @@
+1592422257191	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKpxnNC"
+1592422260814	Marionette	INFO	Listening on port 46547
+1592422260846	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592422283423	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+JavaScript error: https://wizzair.com/static_fe/assets/scripts/889.min.653a21e0.js, line 1: TypeError: x() is null
+1592422288832	Marionette	INFO	Stopped listening on port 46547

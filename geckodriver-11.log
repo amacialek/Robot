@@ -1,0 +1,7 @@
+1591643056368	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilePZLhzN"
+1591643060229	Marionette	INFO	Listening on port 37929
+1591643060324	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591643062101	Marionette	INFO	Stopped listening on port 37929
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+JavaScript error: resource:///modules/FaviconLoader.jsm, line 568: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable
+JavaScript error: resource:///modules/FaviconLoader.jsm, line 568: InvalidStateError: An attempt was made to use an object that is not, or is no longer, usable

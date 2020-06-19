@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200618 18:59:29.038" generator="Robot 3.2 (Python 2.7.17 on linux2)">
+<suite source="/home/tester/ROBOT2/ROBOT2.robot" id="s1" name="ROBOT2">
+<test id="s1-t1" name="Valid Registration">
+<kw name="Open Main Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200618 18:59:29.172" level="INFO">Opening browser 'Firefox' to base url 'https://wizzair.com/pl-pl#/'.</msg>
+<msg timestamp="20200618 18:59:29.174" level="INFO">Firefox driver log is always forced to to: /home/tester/ROBOT2/geckodriver-69.log</msg>
+<status status="PASS" endtime="20200618 18:59:35.514" starttime="20200618 18:59:29.171"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>20</arg>
+</arguments>
+<msg timestamp="20200618 18:59:55.516" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" endtime="20200618 18:59:55.516" starttime="20200618 18:59:35.514"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>${PAGE_TITLE}</arg>
+</arguments>
+<msg timestamp="20200618 18:59:55.519" level="INFO">Page title is 'Oficjalna strona Wizz Air | Rezerwuj bezpośrednio, by skorzystać z najlepszych cen'.</msg>
+<status status="PASS" endtime="20200618 18:59:55.519" starttime="20200618 18:59:55.516"></status>
+</kw>
+<status status="PASS" endtime="20200618 18:59:55.519" starttime="20200618 18:59:29.171"></status>
+</kw>
+<kw name="Click login button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[@data-test="navigation-menu-signin"]</arg>
+</arguments>
+<msg timestamp="20200618 18:59:55.520" level="INFO">Clicking element 'xpath://button[@data-test="navigation-menu-signin"]'.</msg>
+<status status="PASS" endtime="20200618 18:59:56.055" starttime="20200618 18:59:55.520"></status>
+</kw>
+<status status="PASS" endtime="20200618 18:59:56.059" starttime="20200618 18:59:55.520"></status>
+</kw>
+<kw name="Click registration button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[text()=' Rejestracja ']</arg>
+</arguments>
+<msg timestamp="20200618 18:59:56.061" level="INFO">Clicking element 'xpath://button[text()=' Rejestracja ']'.</msg>
+<status status="PASS" endtime="20200618 18:59:58.671" starttime="20200618 18:59:56.061"></status>
+</kw>
+<status status="PASS" endtime="20200618 18:59:58.671" starttime="20200618 18:59:56.060"></status>
+</kw>
+<kw name="Fill valid NAME">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@placeholder="Imię"]</arg>
+<arg>${NAME}</arg>
+</arguments>
+<msg timestamp="20200618 18:59:58.672" level="INFO">Typing text 'Anna' into text field 'xpath://input[@placeholder="Imię"]'.</msg>
+<status status="PASS" endtime="20200618 18:59:59.138" starttime="20200618 18:59:58.672"></status>
+</kw>
+<status status="PASS" endtime="20200618 18:59:59.138" starttime="20200618 18:59:58.672"></status>
+</kw>
+<kw name="Fill valid SURNAME">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@placeholder="Nazwisko"]</arg>
+<arg>${SURNAME}</arg>
+</arguments>
+<msg timestamp="20200618 18:59:59.144" level="INFO">Typing text 'Zofia' into text field 'xpath://input[@placeholder="Nazwisko"]'.</msg>
+<status status="PASS" endtime="20200618 18:59:59.755" starttime="20200618 18:59:59.139"></status>
+</kw>
+<status status="PASS" endtime="20200618 18:59:59.755" starttime="20200618 18:59:59.138"></status>
+</kw>
+<kw name="Choose GENDER">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://label[@data-test="register-genderfemale"]</arg>
+</arguments>
+<msg timestamp="20200618 18:59:59.759" level="INFO">Clicking element 'xpath://label[@data-test="register-genderfemale"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:00.438" starttime="20200618 18:59:59.759"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:00.442" starttime="20200618 18:59:59.759"></status>
+</kw>
+<kw name="Choose COUNTRY CODE">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@class="phone-number__calling-code-selector__empty__placeholder"]</arg>
+</arguments>
+<msg timestamp="20200618 19:00:00.443" level="INFO">Clicking element 'xpath://div[@class="phone-number__calling-code-selector__empty__placeholder"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:00.968" starttime="20200618 19:00:00.442"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@name="phone-number-country-code"]</arg>
+<arg>${COUNTRY_CODE}</arg>
+</arguments>
+<msg timestamp="20200618 19:00:00.969" level="INFO">Typing text '+48' into text field 'xpath://input[@name="phone-number-country-code"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:01.082" starttime="20200618 19:00:00.969"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:01.083" starttime="20200618 19:00:00.442"></status>
+</kw>
+<kw name="Fill valid PHONE NUMBER">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@data-test="check-in-step-contact-phone-number"]</arg>
+<arg>${PHONE_NUMBER}</arg>
+</arguments>
+<msg timestamp="20200618 19:00:01.083" level="INFO">Typing text '123456789' into text field 'xpath://input[@data-test="check-in-step-contact-phone-number"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:01.331" starttime="20200618 19:00:01.083"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:01.331" starttime="20200618 19:00:01.083"></status>
+</kw>
+<kw name="Fill valid EMAIL">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@data-test="booking-register-email"]</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20200618 19:00:01.332" level="INFO">Typing text 'ania@gmail.com' into text field 'xpath://input[@data-test="booking-register-email"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:01.732" starttime="20200618 19:00:01.331"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:01.732" starttime="20200618 19:00:01.331"></status>
+</kw>
+<kw name="Fill valid PASSWORD">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@data-test="booking-register-password"]</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg timestamp="20200618 19:00:01.734" level="INFO">Typing text 'Ania1Zofia2' into text field 'xpath://input[@data-test="booking-register-password"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:02.143" starttime="20200618 19:00:01.733"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:02.143" starttime="20200618 19:00:01.733"></status>
+</kw>
+<kw name="Choose COUNTRY">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://input[@data-test="booking-register-country"]</arg>
+<arg>${COUNTRY}</arg>
+</arguments>
+<msg timestamp="20200618 19:00:02.144" level="INFO">Typing text 'Polska' into text field 'xpath://input[@data-test="booking-register-country"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:02.738" starttime="20200618 19:00:02.144"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:02.738" starttime="20200618 19:00:02.144"></status>
+</kw>
+<kw name="Accept Privacy Politycy">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://label[@for="registration-privacy-policy-checkbox"]</arg>
+</arguments>
+<msg timestamp="20200618 19:00:02.746" level="INFO">Clicking element 'xpath://label[@for="registration-privacy-policy-checkbox"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:03.923" starttime="20200618 19:00:02.738"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:03.924" starttime="20200618 19:00:02.738"></status>
+</kw>
+<kw name="Click final registration button">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://button[@data-test="booking-register-submit"]</arg>
+</arguments>
+<msg timestamp="20200618 19:00:03.928" level="INFO">Clicking element 'xpath://button[@data-test="booking-register-submit"]'.</msg>
+<status status="PASS" endtime="20200618 19:00:04.371" starttime="20200618 19:00:03.928"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:04.371" starttime="20200618 19:00:03.927"></status>
+</kw>
+<status status="PASS" endtime="20200618 19:00:04.375" critical="yes" starttime="20200618 18:59:29.169"></status>
+</test>
+<status status="PASS" endtime="20200618 19:00:04.376" starttime="20200618 18:59:29.043"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="ROBOT2" pass="1">ROBOT2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

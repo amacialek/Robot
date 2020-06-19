@@ -1,0 +1,10 @@
+1592506770210	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilenCcAfh"
+1592506773978	Marionette	INFO	Listening on port 46859
+1592506774056	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592506797095	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+JavaScript error: https://wizzair.com/static_fe/assets/scripts/889.min.653a21e0.js, line 1: TypeError: x() is null
+JavaScript error: , line 0: uncaught exception: Timeout

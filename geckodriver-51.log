@@ -1,0 +1,5 @@
+1592336607651	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0vAd44"
+1592336612660	Marionette	INFO	Listening on port 36767
+1592336612703	Marionette	WARN	TLS certificate errors will be ignored for this session
+1592336639463	Marionette	INFO	Stopped listening on port 36767
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))

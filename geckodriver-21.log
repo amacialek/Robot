@@ -1,0 +1,10 @@
+1591649965203	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileNFyikE"
+1591649968821	Marionette	INFO	Listening on port 36519
+1591649968854	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591649990959	Marionette	INFO	Stopped listening on port 36519
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xA000D,name=PBackgroundIDBDatabase::Msg_Invalidate) Channel error: cannot send/recv
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0xA000E,name=PBackgroundIDBDatabase::Msg_CloseAfterInvalidationComplete) Channel error: cannot send/recv
+

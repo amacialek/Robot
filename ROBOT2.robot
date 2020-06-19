@@ -32,24 +32,51 @@ Valid Registration
   Fill valid PASSWORD
   Choose COUNTRY
   Accept Privacy Politycy
-  Click registration button
+  Click final registration button
 
-  [Teardown]       Close Browser
+  #[Teardown]       Close Browser
 
 
 *** Keywords ***
 Open Main Page
   Open browser       ${URL}       ${BROWSER}
+  Sleep     20
+
   Title should be      ${PAGE_TITLE}
 
 Click login button
-  Click element    class:data-test="navigation-menu-signin"
+  Click element       xpath://button[@data-test="navigation-menu-signin"]
 
-Click registration buttton
-  Click element
+Click registration button
+  Click element       xpath://button[text()=' Rejestracja ']
 
 Fill valid NAME
-  Input Text NAME=FirstName     {NAME}
+  Input Text          xpath://input[@placeholder="Imię"]    ${NAME}
 
 Fill valid SURNAME
-  Input Text NAME=LastName      {SURNAME}
+  Input Text         xpath://input[@placeholder="Nazwisko"]      ${SURNAME}
+
+Choose GENDER
+  Click element      xpath://label[@data-test="register-genderfemale"]
+
+Choose COUNTRY CODE
+  Click element      xpath://div[@class="phone-number__calling-code-selector__empty__placeholder"]
+  Input text         xpath://input[@name="phone-number-country-code"]    ${COUNTRY_CODE}
+
+Fill valid PHONE NUMBER
+  Input Text        xpath://input[@data-test="check-in-step-contact-phone-number"]     ${PHONE_NUMBER}
+
+Fill valid EMAIL
+  Input Text       xpath://input[@data-test="booking-register-email"]      ${EMAIL}
+
+Fill valid PASSWORD
+  Input Text       xpath://input[@data-test="booking-register-password"]     ${PASSWORD}
+
+Choose COUNTRY
+  Input Text    xpath://input[@data-test="booking-register-country"]     ${COUNTRY}
+
+Accept Privacy Politycy
+  Click element    xpath://label[@for="registration-privacy-policy-checkbox"]
+
+Click final registration button
+  Click element   xpath://button[@data-test="booking-register-submit"]

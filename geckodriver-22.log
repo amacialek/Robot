@@ -1,0 +1,5 @@
+1591650112363	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileyCzXl3"
+1591650116011	Marionette	INFO	Listening on port 34171
+1591650116098	Marionette	WARN	TLS certificate errors will be ignored for this session
+1591650139581	Marionette	INFO	Stopped listening on port 34171
+JavaScript error: https://www.gstatic.com/recaptcha/releases/ADnAC3ZykfbIOflWgrKNsVVT/recaptcha__en.js, line 93: NS_ERROR_NOT_INITIALIZED: 
